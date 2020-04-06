@@ -32,7 +32,7 @@ namespace Tirage
                 else break;
             }
             GetSide(x);
-            Console.Write("Roll a dia for {0}:  ", b);
+            Console.Write("Roll a die for {0}:  ", b);
             Tirag();
             Console.WriteLine();
             if (x == 4)
@@ -50,7 +50,7 @@ namespace Tirage
                     case 5: b = 36; break;
                     case 6: b = 45; break;
                     case 7: b = 49; break;
-                    case 12: b = 24; break;
+                    case 12:b = 24; break;
                 }
                 return a;
             }
@@ -76,11 +76,7 @@ namespace Tirage
                             Console.Write(" " + i);
                         if (tirag.Count == 0) Tirag();
                     }
-                    if (tirag.Count == x)
-                    {
-                        return;
-                    }
-                    // Console.WriteLine("Попытка " + k);
+                    if (tirag.Count == x) return;
                     if (k == 5) Console.WriteLine("Подходящая комбинация не найдена.");
                 }
             }
