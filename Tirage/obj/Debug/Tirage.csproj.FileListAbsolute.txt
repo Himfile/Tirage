@@ -4,10 +4,10 @@ C:\Users\USER-PC\source\repos\Tirage\Tirage\bin\Debug\Tirage.pdb
 C:\Users\USER-PC\source\repos\Tirage\Tirage\obj\Debug\Tirage.csprojAssemblyReference.cache
 C:\Users\USER-PC\source\repos\Tirage\Tirage\obj\Debug\Tirage.exe
 C:\Users\USER-PC\source\repos\Tirage\Tirage\obj\Debug\Tirage.pdb
-C:\Users\ONIKSfly\source\repos\Tirage\Tirage\obj\Debug\Tirage.csprojAssemblyReference.cache
-C:\Users\ONIKSfly\source\repos\Tirage\Tirage\obj\Debug\Tirage.csproj.CoreCompileInputs.cache
-C:\Users\ONIKSfly\source\repos\Tirage\Tirage\obj\Debug\Tirage.exe
-C:\Users\ONIKSfly\source\repos\Tirage\Tirage\obj\Debug\Tirage.pdb
-C:\Users\ONIKSfly\source\repos\Tirage\Tirage\bin\Debug\Tirage.exe.config
-C:\Users\ONIKSfly\source\repos\Tirage\Tirage\bin\Debug\Tirage.exe
-C:\Users\ONIKSfly\source\repos\Tirage\Tirage\bin\Debug\Tirage.pdb
+C:\Users\USER-PC\GitRepose\Projects\Tirage\Tirage\bin\Debug\Tirage.exe.config
+C:\Users\USER-PC\GitRepose\Projects\Tirage\Tirage\bin\Debug\Tirage.exe
+C:\Users\USER-PC\GitRepose\Projects\Tirage\Tirage\bin\Debug\Tirage.pdb
+C:\Users\USER-PC\GitRepose\Projects\Tirage\Tirage\obj\Debug\Tirage.csprojAssemblyReference.cache
+C:\Users\USER-PC\GitRepose\Projects\Tirage\Tirage\obj\Debug\Tirage.csproj.CoreCompileInputs.cache
+C:\Users\USER-PC\GitRepose\Projects\Tirage\Tirage\obj\Debug\Tirage.exe
+C:\Users\USER-PC\GitRepose\Projects\Tirage\Tirage\obj\Debug\Tirage.pdb
