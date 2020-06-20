@@ -23,7 +23,7 @@ namespace Tirage
                 }
                 if (x != 4 && x != 5 && x != 6 && x != 7 && x != 8 && x != 12)
                 {
-                    Console.WriteLine("Введите число 4-7,12");
+                    Console.WriteLine("Введите число 4-8,12");
                     continue;
                 }
                 else break;
