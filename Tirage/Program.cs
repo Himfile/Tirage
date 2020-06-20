@@ -17,14 +17,8 @@ namespace Tirage {
                     Console.WriteLine ("Введите число 4-8,12");
                     continue;
                 }
-<<<<<<< HEAD
-                if (x != 4 && x != 5 && x != 6 && x != 7 && x != 8 && x != 12)
-                {
-                    Console.WriteLine("Введите число 4-8,12");
-=======
                 if (Array.IndexOf (xBool, x) < 0) {
                     Console.WriteLine ("Введите число 4-8,12");
->>>>>>> cd3b9f8a63a51bd2b012fa17584861c43e6bcabd
                     continue;
                 } else break;
             }
