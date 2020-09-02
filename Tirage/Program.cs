@@ -7,42 +7,62 @@ namespace Tirage
     {
         static void Main(string[] args)
         {
-            int b = 0;
-            int x = 0;
+            int b = 0;//Number of sides of the bone.
+            int x = 0;//Points in the game.
             Random dice = new Random();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 3; i++)
             {
                 try
                 {
+                    //Set the number of points for choosing a game.
                     x = int.Parse(Console.ReadLine());
+
+                    //Input validation.
+                    if (x != 4 && x != 5 && x != 6 && x != 7 && x != 8 && x != 12)
+                    {
+                        if (i == 2)
+                        {
+                            Console.WriteLine("Game over");
+                            break;
+                        }
+                        Console.WriteLine("Enter the number 4-8,12");
+                        continue;
+                    }
+                    else break;
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("Введите число 4-8,12");
+                    if (i == 2)
+                    {
+                        Console.WriteLine("Game over");
+                        break;
+                    }
+
+                    Console.WriteLine("Enter the number 4-8,12");
                     continue;
                 }
-                if (x != 4 && x != 5 && x != 6 && x != 7 && x != 8 && x != 12)
-                {
-                    Console.WriteLine("Введите число 4-8,12");
-                    continue;
-                }
-                else break;
             }
+
+            //The game is selected by points.
             GetSide(x);
-            Console.Write("Roll a die for {0}:  ", b);
+            if (b == 0) return;
+            Console.Write("Roll a die for {0}:  ", b);//Tells which game is selected.
+
+            //Roll a die.
             Tirag();
             Console.WriteLine();
             if (x == 4)
             {
                 Console.Write($"\t\t    ");
-                Tirag();
+                Tirag();// Roll a die again for a 4of20-game.
                 Console.WriteLine();
             }
 
             Console.WriteLine(DateTime.Now.ToString());
 
-
             Console.ReadKey();
+
+            //Choice of game by points.
             int GetSide(int a)
             {
                 switch (a)
@@ -56,6 +76,7 @@ namespace Tirage
                 }
                 return a;
             }
+            //Launch of the drawing.
             void Tirag()
             {
                 HashSet<int> tirag = new HashSet<int>();
@@ -67,7 +88,7 @@ namespace Tirage
                 }
                 foreach (int i in tirag)
                 {
-                        Console.Write(" " + i);
+                        Console.Write(" " + i);//The draw report.
                 }
             }
         }
