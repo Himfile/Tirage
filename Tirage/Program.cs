@@ -7,18 +7,18 @@ namespace Tirage
     {
         static void Main(string[] args)
         {
-            int b = 0;//Number of sides of the bone.
-            int x = 0;//Points in the game.
+            int sides = 0;//Number of sides of the bone.
+            int points = 0;//Points in the game.
             Random dice = new Random();
             for (int i = 0; i < 3; i++)
             {
                 try
                 {
                     //Set the number of points for choosing a game.
-                    x = int.Parse(Console.ReadLine());
+                    points = int.Parse(Console.ReadLine());
 
                     //Input validation.
-                    if (x != 4 && x != 5 && x != 6 && x != 7 && x != 8 && x != 12)
+                    if (points != 4 && points != 5 && points != 6 && points != 7 && points != 8 && points != 12)
                     {
                         if (i == 2)
                         {
@@ -44,21 +44,21 @@ namespace Tirage
             }
 
             //The game is selected by points.
-            GetSide(x);
-            if (b == 0) return;
-            Console.Write("Roll a die for {0}:  ", b);//Tells which game is selected.
+            GetSide(points);
+            if (sides == 0) return;
+            Console.Write("Roll a die for {0}:  ", sides);//Tells which game is selected.
 
             //Roll a die.
             Tirag();
             Console.WriteLine();
-            if (x == 4)
+            if (points == 4)
             {
                 Console.Write($"\t\t    ");
                 Tirag();// Roll a die again for a 4of20-game.
                 Console.WriteLine();
             }
 
-            Console.WriteLine(DateTime.Now.ToString());
+            //Console.WriteLine(DateTime.Now.ToString());
 
             Console.ReadKey();
 
@@ -67,12 +67,12 @@ namespace Tirage
             {
                 switch (a)
                 {
-                    case 4: b = 20; break;
-                    case 5: b = 36; break;
-                    case 6: b = 45; break;
-                    case 7: b = 49; break;
-                    case 8: b = 20; break;
-                    case 12: b = 24; break;
+                    case 4: sides = 20; break;
+                    case 5: sides = 36; break;
+                    case 6: sides = 45; break;
+                    case 7: sides = 49; break;
+                    case 8: sides = 20; break;
+                    case 12: sides = 24; break;
                 }
                 return a;
             }
@@ -80,11 +80,10 @@ namespace Tirage
             void Tirag()
             {
                 HashSet<int> tirag = new HashSet<int>();
-                while(tirag.Count < x)
+                while(tirag.Count < points)
                 {
-                    int d = dice.Next(1, b + 1);
+                    int d = dice.Next(1, sides + 1);
                     tirag.Add(d);
-
                 }
                 foreach (int i in tirag)
                 {
